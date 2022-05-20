@@ -1,28 +1,37 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <HeaderItem />
+    <v-main>
+      <!-- hero section -->
+      <HeroComponents/>  
+      <!-- about us -->
+      <AboutItem/>
+      <!-- portofolio -->
+      <PortofolioItem/>
+      <!-- project -->
+      <ProjectItem/>
+      <!-- gallery -->
+      <GalleryItem/>
+      <!-- contact us -->
+      <ContactUs/>
+      <!-- footer -->
+      <FooterItem/>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
+import HeaderItem from "./components/HeaderItem";
+import HeroComponents from "./components/HeroComponents.vue";
+import AboutItem from "./components/AboutItem.vue";
+import PortofolioItem from "./components/PortofolioItem.vue";
+import ProjectItem from "./components/ProjectItem.vue";
+import GalleryItem from "./components/GalleryItem.vue";
+import ContactUs from "./components/ContactUs.vue";
+import FooterItem from "./components/FooterItem.vue";
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  components: { HeaderItem, HeroComponents, AboutItem, PortofolioItem, ProjectItem, GalleryItem, ContactUs, FooterItem }
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
